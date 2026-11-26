@@ -8,6 +8,6 @@
 | `kernel.config` | 可选 `CONFIG_KERNEL_PRINTK_TIME=y/n`、`CONFIG_KERNEL_MAGIC_SYSRQ=y/n`（每行填一个值）。 |
 | `kmods.config` | 可选 `CONFIG_PACKAGE_kmod-dummy=y`、`CONFIG_PACKAGE_kmod-ifb=y`、`CONFIG_PACKAGE_kmod-netem=y`、`CONFIG_PACKAGE_kmod-vxlan=y`。不支持删除基础模块。 |
 
-以 `#` 开头的行为注释。只接受表内列出的项目，其他文件不会进入构建；不要提交脚本、补丁、光猫身份或密钥。需要新增选项时，请先开 Issue 说明用途。
+以 `#` 开头的行为注释。只接受表内列出的项目；PR 只能修改这三份文件，不要提交脚本、补丁、光猫身份或密钥。需要新增选项时，请先开 Issue 说明用途。
 
-提交 PR 代表申请，审核后由维护者触发受控构建；Fork 自己运行 Actions 不会触发私有构建。固件不会自动公开，能否交付取决于构建验证结果、原厂组件分发许可及对应源码义务。
+提交非草稿 PR 即可申请：私有构建服务每两小时自动检查，不需要维护者手动触发，也不需要在 Fork 启用 Actions。每个北京时间自然日，全库最多接收 2 单、每个 GitHub 账号最多接收 1 单，超额的有效申请等待后续扫描；同一源码和配置不会重复构建。GitHub 定时任务可能延迟，请保持 PR 打开。当前结果仅保存在私有构建库；含受限原厂组件的固件不对外下载。
